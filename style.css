@@ -1,0 +1,285 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15px;
+    background-image: linear-gradient(lightblue, yellow);
+}
+
+.pageContainer {
+    display: grid;
+    grid-gap: 1.25rem;   
+    margin: 0 6.2rem;
+    padding-bottom: 1rem;
+}
+
+/* Header */
+
+header {
+    height: 5rem;
+    padding-top: 1rem;
+    #padding-right: 8rem;
+}
+
+#title {
+    font-family: "Brush Script MT";
+    font-size: 4rem;
+    font-weight:500;
+    float: right;
+    padding-right: 1rem;
+    color:darkblue;
+}
+
+#umbrellaIcon {
+    float: left;
+    font-size: 3rem;
+    float: right;
+    padding-top: 1rem;
+    color: yellow;
+}
+
+/* Navigation */
+
+.menu ul {
+    display: grid;
+    grid-gap: 10px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    color: darkblue;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.menu a:hover {
+    color: deepskyblue;
+}
+
+/* Top Features */
+.top {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-areas: "main main main main first first" "main main main main second second"
+}
+
+.main {
+    grid-area: main;
+    min-height: 500px;
+    background: white url(v2.jpg);
+    background-size: cover; 
+    background-position: bottom right;
+    padding-right: 20px;
+    border-bottom: solid darkblue 0.5rem;
+}
+
+.main > * {
+    background: var(--yellow);
+    padding: 5px;
+}
+
+    .main > h2 {
+        color: yellow;
+        font-size: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+.exploreMore {
+    #display: flex;
+    #flex-direction: column;
+    #align-items: flex-end;
+    #justify-content: center;
+    float: right;
+    border: solid white 1px;
+    color: white;
+    text-transform:uppercase;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.first {
+    grid-area: first;
+    background: white url(v1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-bottom: solid darkblue 0.5rem;
+}
+
+.second {
+    grid-area: second;
+    background: white url(v3.jpg);
+    background-size: cover;
+    #background-position: bottom right;
+    border-bottom: solid darkblue 0.5rem;
+}
+
+/* Destinations */
+
+.destinations {
+    display: grid;
+    grid-gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    #margin: 0 6.2rem 0 6.2rem;
+}
+
+.destination {
+    background: white;
+    padding: 10px;
+    border: 1px solid white;
+    text-align: center;
+    #box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    
+}
+
+    .destination > h3 {
+        font-size: 1.5rem;
+        padding-bottom: 0.5rem;
+        color: darkblue;
+    }
+
+    .destination > p,
+    .floridaDetails > p {
+        color: rgba(0,0,0,0.5);
+    }
+
+/* About Section */
+
+.florida {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    grid-gap: 1.25rem;
+}
+
+    .florida > img {
+        width: 100%;
+        border-bottom: solid darkblue 0.5rem;
+    }
+
+.floridaDetails {
+    padding: 0.5rem;
+}
+
+.floridaDetails > h2 {
+    color: darkblue; 
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.seeMore {
+    border: solid white 1px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1rem;
+    width: 6rem;
+    justify-content: center;
+    display: flex;
+    
+}
+
+#food-time-header {
+    color: darkblue;
+    font-size: 2rem;
+    text-align-last: center;
+    padding-bottom: 0.5rem;
+}
+
+.gallery-container {
+    border: solid darkblue 1px;
+    padding: 10px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.gallery > img {
+    width: 100%;
+}
+
+footer {
+    font-weight: 500;
+    color: darkblue;
+    text-align: center;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1024px) {
+    .destinations {
+        #grid-template-columns: 1fr 1fr;
+    }
+
+    .pageContainer {
+        margin: 0 3rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .destinations {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .pageContainer {
+        margin: 0 3rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .pageContainer {
+        margin: 0 1rem;
+    }
+}
+
+/* Extra small devices (phones, 425px and down) */
+@media only screen and (max-width: 425px) {
+    .pageContainer {
+        #margin: 0 0.25rem;
+    }
+
+    .destinations {
+        grid-template-columns: 1fr ;
+    }
+
+    .top {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "main main main main main main" "main main main main main main";
+        grid-gap: 0;
+    }
+
+    .menu ul {
+        grid-gap: 5px;   
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .florida > img {
+        height: 100%;
+    }
+
+}
+
+
+
+
+
+
